@@ -34,7 +34,7 @@ void loop() {
     analogWrite(DEBUG_LED, 0);
     if (driver.recv(buf, &buflen))
     {
-      driver.printBuffer(buf, buflen);
+      driver.printBuffer("Got: ", buf, buflen);
       analogWrite(DEBUG_LED, 0);
       Serial.println((char *)buf);
       analogWrite(DEBUG_LED, 255);
